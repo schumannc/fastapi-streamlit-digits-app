@@ -1,0 +1,5 @@
+ipykernel
+scikit-learn
+pandas 
+fastapi[all]
+matplotlib

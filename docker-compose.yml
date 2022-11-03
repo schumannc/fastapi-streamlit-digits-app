@@ -1,0 +1,19 @@
+version: '3'
+services:
+  api:
+    build: 
+      context: ./api
+    ports:
+      - 8080:80
+    volumes:
+      - ${PWD}/api:/api
+
+  app:
+    build:
+      context: ./app
+    ports:
+      - 8501:8501
+    volumes:
+      - ${PWD}/app:/app
+    depends_on:
+      - api
